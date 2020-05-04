@@ -19,12 +19,6 @@
     <div>
       
     <form action="registration.php" method="post">
-        <div class="container">
-          <input type="radio" id="Log In">
-          <label for="Log In">Log In</label>
-          <input type="radio" id="Register">
-          <label for="Register">Register</label>
-        </div>
         <div class="form-group">
           <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -39,6 +33,10 @@
         <button onclick="ValidateEmail(); CheckPasswordStudent()">Student</button>
         <button onclick="ValidateEmail(); CheckPasswordProf()">Professor</button>
     
+    </div>
+    <div class="container">
+      <p>&nbsp;</p>
+      <a href="./register.html">Register Here</a>
     </div>
    
 
