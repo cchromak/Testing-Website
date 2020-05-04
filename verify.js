@@ -11,6 +11,7 @@ function ValidateEmail()
 }
 
 
+
 function CheckPasswordStudent() 
 { 
     var pword = document.getElementById('password').value
