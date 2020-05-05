@@ -17,7 +17,6 @@
     </div>
 
     <div>
-      
     <form action="connection.php" method="post">
         <div class="form-group">
           <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Email">
@@ -30,13 +29,13 @@
     </div>
 
     <div class="container">
-    <form action= "registration.php" method = "POST" >
+    <form action= "registration.php" method = "POST" id="smaller">
         <button onclick="ValidateEmail(); CheckPasswordStudent()">Student <form action="registration.php" method="post"></button>
         <button onclick="ValidateEmail(); CheckPasswordProf()">Professor <form action="registration.php" method="post"></button>
     
     </div>
-    <div class="container"> 
-      <a href="./register.php">Register</a>
+    <div class="container" style="padding: 15px;"> 
+      <a href="./register.html">Register Here</a>
     </div>
     <script src="verify.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
