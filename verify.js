@@ -7,6 +7,7 @@ function ValidateEmail()
     
   }
     alert("You have entered an invalid email address!")
+    returnToPreviousPage();
     return (false)
 }
 
