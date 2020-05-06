@@ -30,8 +30,8 @@
 
     <div class="container">
     <form action= "registration.php" method = "POST" id="smaller">
-        <button onclick="ValidateEmail(); CheckPasswordStudent()">Student <form action="registration.php" method="post"></button>
-        <button onclick="ValidateEmail(); CheckPasswordProf()">Professor <form action="registration.php" method="post"></button>
+        <button onclick="ValidateEmail(); /*CheckPasswordStudent()*/">Student <form action="registration.php" method="post"></button>
+        <button onclick="ValidateEmail(); /*CheckPasswordProf()*/">Professor <form action="registration.php" method="post"></button>
     
     </div>
     <div class="container" style="padding: 15px;"> 
