@@ -39,7 +39,7 @@ function CheckPasswordProf()
 
     location.href='professor.html';
     }else{
-        alert('password is dead wrong bro')
+        alert('Incorrect Password')
         return false
     }
 }
