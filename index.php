@@ -4,12 +4,28 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styleIndex.css">
     <title>Learning Is Fun</title>
 </head>
 <body>
-    
+	<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="p-4" style="background-color: aliceblue">
+      <h4 class="text-black"><a href="default.asp">Site Map</a></h4>
+      <h4 class="text-black"><a href="default.asp">About Us</a></h4>
+      <h4 class="text-black"><a href="default.asp">Contact Us</a></h4>
+      <h4 class="text-black"><a href="default.asp">Help</a></h4>
+    </div>
+  </div>
+  <nav class="navbar navbar-light" style="background-color: aliceblue">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
 
     <div class="container">
        <h1 class="display-1">Welcome to <b>EpicsauceTM</b> Testing Inc.</h1>
