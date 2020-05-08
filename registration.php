@@ -2,7 +2,7 @@
 $servername = "mars.cs.qc.cuny.edu";
 $username = "";
 $password = "";
-$db = "chch3299";
+$db = "";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password,$db);
 // Check connection
@@ -17,7 +17,7 @@ echo "Connected successfully";
 <?php
 
 //Login users
-$db = mysqli_connect('mars.cs.qc.cuny.edu' , 'your mars username' , 'your mars password' , 'db name = your mars  username') or die("could not connect to database" ) ;
+$db = mysqli_connect('mars.cs.qc.cuny.edu' , '' , '' , '') or die("could not connect to database" ) ;
 $email = $_POST['email'] ;
 $password = $_POST['password']  ;
 

@@ -13,10 +13,11 @@
 	<div class="pos-f-t">
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="p-4" style="background-color: aliceblue">
-      <h4 class="text-black"><a href="default.asp">Site Map</a></h4>
-      <h4 class="text-black"><a href="default.asp">About Us</a></h4>
-      <h4 class="text-black"><a href="default.asp">Contact Us</a></h4>
-      <h4 class="text-black"><a href="default.asp">Help</a></h4>
+      <h4 class="text-black"><a href="index.php" class="no-underline">Log in</a></h4>
+      <h4 class="text-black"><a href="register.html" class="no-underline">Register</a></h4>
+      <h4 class="text-black"><a href="default.asp" class="no-underline">About Us</a></h4>
+      <h4 class="text-black"><a href="default.asp" class="no-underline">Contact Us</a></h4>
+      <h4 class="text-black"><a href="default.asp" class="no-underline">Help</a></h4>
     </div>
   </div>
   <nav class="navbar navbar-light" style="background-color: aliceblue">
@@ -50,9 +51,7 @@
         <button onclick="ValidateEmail(); /*CheckPasswordProf()*/">Professor <form action="registration.php" method="post"></button>
     
     </div>
-    <div class="container" style="padding: 15px;"> 
-      <a href="./register.html">Register Here</a>
-    </div>
+   
     <script src="verify.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
