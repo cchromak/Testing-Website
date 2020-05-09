@@ -36,32 +36,29 @@
 
   <form action="registration.php" method="post">
     <div class="form-group">
-      <input type="UserName" class="form-control" id="UserName" name="UserName" placeholder="Enter Prefered Username">
+      <input type="userName" class="form-control" id="userName" name="userName" placeholder="Enter Prefered Username" onkeyup="checkFields()">
     </div>
     <div class="form-group">
-      <input type="firstName" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name">
+      <input type="firstName" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name" onkeyup="checkFields()">
     </div>
     <div class="form-group">
-      <input type="lastName" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name">
+      <input type="lastName" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name" onkeyup="checkFields()">
     </div>
     <div class="form-group">
-      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-        placeholder="Enter Email">
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Email" onkeyup="checkFields()">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" onkeyup="checkFields()">
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" id="conPassword" name="conPassword" placeholder="Confirm Password">
+      <input type="password" class="form-control" id="conPassword" name="conPassword" placeholder="Confirm Password" onkeyup="checkFields()">
+    </div>
+    <div class="container">
+        <button type="submit" id="submitS" name="submitS" disabled>Student<span> </span></button>
+        <button type="submit" id="submitP" name="submitP" disabled>Professor<span> </span></button>
     </div>
   </form>
-  </div>
-
-  <div class="container">
-    <button onclick="ValidateEmail()">Student</button>
-    <button onclick="ValidateEmail()">Professor</button>
-
   </div>
 
   <script src="verify.js"></script>
