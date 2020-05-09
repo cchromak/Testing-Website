@@ -16,7 +16,7 @@
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="p-4" style="background-color: aliceblue">
         <h4 class="text-black"><a href="index.php" class="no-underline">Log in</a></h4>
-        <h4 class="text-black"><a href="register.html" class="no-underline">Register</a></h4>
+        <h4 class="text-black"><a href="register.php" class="no-underline">Register</a></h4>
         <h4 class="text-black"><a href="default.asp" class="no-underline">About Us</a></h4>
         <h4 class="text-black"><a href="default.asp" class="no-underline">Contact Us</a></h4>
         <h4 class="text-black"><a href="default.asp" class="no-underline">Help</a></h4>
