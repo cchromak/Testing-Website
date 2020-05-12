@@ -18,7 +18,7 @@
         <h4 class="text-black"><a href="index.php" class="no-underline">Log in</a></h4>
         <h4 class="text-black"><a href="register.html" class="no-underline">Register</a></h4>
         <h4 class="text-black"><a href="default.asp" class="no-underline">About Us</a></h4>
-        <h4 class="text-black"><a href="default.asp" class="no-underline">Contact Us</a></h4>
+        <h4 class="text-black"><a href="contactus.html" class="no-underline">Contact Us</a></h4>
         <h4 class="text-black"><a href="default.asp" class="no-underline">Help</a></h4>
 
       </div>
@@ -34,7 +34,7 @@
     <h1 index="greeting" class="display-1">Let's sign you up!</h1>
   </div>
 
-  <form action="registration.php" method="post">
+  <form action="makeAccount.php" method="post">
     <div class="form-group">
       <input type="UserName" class="form-control" id="UserName" name="UserName" placeholder="Enter Prefered Username">
     </div>
@@ -59,8 +59,8 @@
   </div>
 
   <div class="container">
-    <button onclick="ValidateEmail()">Student</button>
-    <button onclick="ValidateEmail()">Professor</button>
+    <button onclick="ValidateEmail()">Student<form action="makeAccount.php" method="post"></form></button>
+    <button onclick="ValidateEmail()">Professor<form action="makeAccount.php" method="post"></form></button>
 
   </div>
 

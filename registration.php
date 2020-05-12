@@ -1,8 +1,8 @@
 <?php
 $servername = "mars.cs.qc.cuny.edu";
-$username = "";
-$password = "";
-$db = "";
+$username = "chch3299";
+$password = "23703299";
+$db = "chch3299";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $db);
 // Check connection
@@ -17,31 +17,31 @@ echo "Connected successfully";
 <?php
 
 //Login users
-$db = mysqli_connect('mars.cs.qc.cuny.edu', '', '', '') or die("could not connect to database");
-$email = $_POST['email'];
+$db = mysqli_connect('mars.cs.qc.cuny.edu', 'chch3299', '23703299', 'chch3299') or die("could not connect to database");
+$login = $_POST['login'];
 $password = $_POST['password'];
 
 if (isset($_POST['login'])) {
     $errors = array();
 
-    if (empty($email)) {
-        array_push($errors, "Email is required");
+    if (empty($login)) {
+        array_push($errors, "Username is required");
     }
     if (empty($password)) {
         array_push($errors, "Password is required");
     }
     if (count($errors) == 0) {
         $password = md5($password);
-        $query = "Select * from users where UserEmail = '$email' AND UserPassword = '$password' ";
+        $query = "Select * from users where UserEmail = '$Login' AND UserPassword = '$password' ";
         $results = mysqli_query($db, $query);
 
         if (mysqli_num_rows($results)) {
-            $_SESSION['email'] = $email;
+            $_SESSION['login'] = $login;
             $_SESSION['success'] = "Logged in Successfully";
 
             echo "You are now logged in. Thank you :)";
         } else {
-            array_push($errors, "Wrong email/Password combination. Please try again.");
+            array_push($errors, "Wrong Username/Password combination. Please try again.");
         }
     }
     mysqli_close($db);
