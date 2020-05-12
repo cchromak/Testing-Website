@@ -45,7 +45,7 @@ if (isset($_POST['login'])) {
             $_SESSION['login'] = $login;
             $_SESSION['success'] = "Logged in Successfully";
 
-            echo "You are now logged in. Thank you :)";
+            header("Location: student.html");
         } else {
             array_push($errors, "Wrong Username/Password combination. Please try again.");
         }
