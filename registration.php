@@ -82,7 +82,7 @@ if (isset($_POST['login'])) {
 
 
     if ($user) {
-        if ($user["UserEmail"] === $email) {
+        if ($user["email"] === $email) {
             array_push($errors, "This email is already registered");
         }
     }
@@ -92,18 +92,18 @@ if (isset($_POST['login'])) {
     if (count($errors) == 0) {
         $password = md5($password); //This will encrypt password
 
-        $query = "Insert into users (UserName , UserEmail , UserPassword ) values ( '$name' , '$email' , '$password' )";
-
-        mysqli_query($db, $query);
+        $sql = "INSERT INTO appuser (login, pwd, first_name, last_name, email, user_type) VALUES('$userName', '$password', '$first', '$last', '$email', '$user_type')";
+        //echo "Inserted";
+        mysqli_query($db, $sql);
 
         $_SESSION['UserName'] = $name;
         $_SESSION['success'] = "You are now signed Up";
 
-        header('location: index.php');
+        //header('location: index.php');
         mysqli_close($db);
     }
-}
 
+    $db->close();
 ?>
 <?php if (is_countable($errors) && count($errors) > 0) : ?>
     <div>
@@ -111,8 +111,7 @@ if (isset($_POST['login'])) {
     <p><?php echo $error ?></p>
     <?php endforeach ?>
     <!--redirect to index.php after 2 seconds-->
-<?php header("Refresh:2; url= index.php"); ?>
+<?php //header("Refresh:2; url= index.php"); ?>
 </div>
 
 <?php endif ?>
--->
