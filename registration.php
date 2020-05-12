@@ -63,12 +63,16 @@ $errors = array() ;
 
 //register users
 
-$name = $_POST['name'] ;
-$confirmpassword = $_POST['confirmpassword'] ;
+$userName = $_POST['userName'];
+$firstName = $_POST['firstName'] ;
+$lastName = $_POST['lastName'];
+$conPassword = $_POST['conPassword'] ;
+$email = $_POST['email'];
+$psswd = $_POST['password'];
 
 //form validation
 
-if( empty($name) )
+if( empty($firstName) )
 {
     array_push( $errors , "Name is required") ;
 } 
@@ -83,13 +87,13 @@ if( empty($password))
     array_push($errors , "Password is required") ;
 } 
 
-if( $password != $confirmpassword )
+if( $psswd != $conPassword )
 {
     array_push($errors , "Password do not match" ) ;
 }
 
 //check database for existing user with same username
-$user_check_query = "Select * from appuser where UserEmail = '$email' LIMIT 1" ;
+$user_check_query = "Select * from appuser where email = '$email' LIMIT 1" ;
 
 $results = mysqli_query( $db , $user_check_query ) ;
 $user = mysqli_fetch_assoc($results) ;
@@ -97,7 +101,7 @@ $user = mysqli_fetch_assoc($results) ;
 
 if($user)
 {
-    if($user["UserEmail"] === $email)
+    if($user["email"] === $email)
     {
         array_push($errors , "This email is already registered" ) ;
     }
@@ -107,13 +111,12 @@ if($user)
 
 if( count($errors) == 0 )
 {
-    $password = md5($password) ; //This will encrypt password
-
-    $query = "Insert into appuser (UserName , UserEmail , UserPassword ) values ( '$name' , '$email' , '$password' )" ;
+   
+    $query = "Insert into appuser (login , pwd , first_name, last_name, email ) values ( '$userName' , '$password' , '$firstName', '$lastName', '$email' )" ;
     
     mysqli_query($db , $query ) ;
 
-    $_SESSION['UserName'] = $name ;
+    $_SESSION['userName'] = $userName ;
     $_SESSION['success'] = "You are now signed Up" ;
 
     header( 'location: index.php' ) ;
