@@ -36,7 +36,7 @@
 	   <h2>Kevin Cardenas</h2>
 	   <p> Splatoon goon </p>
        <h2>Chris Chromak</h2>
-       <img src="img/cchromak.png" alt="Chris Chromak" align="left" style="border:2px solid black">
+       <img src="img/cchromak.png" alt="Chris Chromak" align="left" style="border:2px solid black" class="header-photo img-fluid">
        <p> The daddy </p>
        <h2>Charly Gomez</h2>
        <p> Soup lover </p>
