@@ -80,8 +80,8 @@
         <input type="password" class="form-control" id="conPassword" name="conPassword" placeholder="Confirm Password" onkeyup="checkFields()">
       </div>
       <div class="container">
-        <button type="submit" id="submitS" name="submitS" class="grayedOut" disabled>Student<span> </span></button>
-        <button type="submit" id="submitP" name="submitP" class="grayedOut" disabled>Professor<span> </span></button>
+        <button type="submit" id="submitS" name="submitS" class="grayedOut btn btn-secondary" disabled>Student<span> </span></button>
+        <button type="submit" id="submitP" name="submitP" class="grayedOut btn btn-secondary" disabled>Professor<span> </span></button>
       </div>
     </form>
   </div>
