@@ -25,7 +25,7 @@ function checkFields(){
     document.getElementById('submitS').classList.add("btn", "btn-outline-primary");
     document.getElementById('submitP').classList.add("btn", "btn-outline-primary");
     document.getElementById('submitP').classList.remove("btn-secondary");
-     document.getElementById('submitS').classList.remove("btn-secondary");
+    document.getElementById('submitS').classList.remove("btn-secondary");
   }
   //if something is wrong or missing, the user cannot submit
   else{
