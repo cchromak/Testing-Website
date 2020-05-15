@@ -68,7 +68,7 @@
         <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" onkeyup="checkLoginFields()">
       </div>
       <div class="container">
-        <button type="submit" id="loginB" name="loginB" class="grayedOut" disabled>Login!<span> </span></button>
+        <button type="submit" id="loginB" name="loginB" class="grayedOut btn btn-secondary" disabled>Login!<span> </span></button>
       </div>
     </form>
   </div>
