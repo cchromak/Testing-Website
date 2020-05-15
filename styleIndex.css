@@ -41,6 +41,7 @@ button[disabled] > span{
     position: absolute;
     padding: 0;
     top: 0;
+    cursor: not-allowed;
     left: 0;
     width: 100%;
     height: 100%;
