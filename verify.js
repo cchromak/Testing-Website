@@ -22,6 +22,8 @@ function checkFields(){
     console.log("ready");
     document.getElementById('submitS').disabled = false;
     document.getElementById('submitP').disabled = false;
+    document.getElementById('submitS').classList.add("btn", "btn-outline-primary");
+    document.getElementById('submitP').classList.add("btn", "btn-outline-primary");
   }
   //if something is wrong or missing, the user cannot submit
   else{
@@ -71,6 +73,7 @@ function checkLoginFields(){
   var password = document.getElementById('password').value;
   if(user != "" && password != ""){
     document.getElementById('loginB').disabled = false;
+    document.getElementById('loginB').classList.add("btn", "btn-outline-primary");
   }
   else{
     document.getElementById('loginB').disabled = true;
