@@ -51,7 +51,20 @@
   </div>
 
   <div class="container">
-    <h1 class="display-1">Here Is Your Professor Dashboard</h1>
+    <h1 class="display-1">Assignments</h1>
+  </div>
+  <div>
+    <?php
+      $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");  //select question_sets from database
+      $sql = "SELECT title from questionset";
+      $results = mysqli_query($db, $sql);
+      while($row = $results->fetch_row()){
+        //create a div to hold each assignment
+        echo '<div class="aList">';
+        echo sprintf("<span> %s </span>", $row[0]);
+        echo '</div>';
+      }
+    ?>
   </div>
   <div class ="container">
   </div>
