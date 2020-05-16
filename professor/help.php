@@ -35,7 +35,7 @@
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="p-4" style="background-color: aliceblue">
         <h4 class="text-black"><a href="professor.php" class="no-underline">Professor Dashboard</a></h4>
-        <h4 class="text-black"><a href="pStudents.php" class="no-underline">Students</a></h4>
+        <h4 class="text-black"><a href="makeQuestions.php" class="no-underline">Create Questions</a></h4>
         <h4 class="text-black"><a href="assignments.php" class="no-underline">Assignments</a></h4>
         <h4 class="text-black"><a href="aboutus.php" class="no-underline">About Us</a></h4>
         <h4 class="text-black"><a href="contactus.php" class="no-underline">Contact Us</a></h4>
