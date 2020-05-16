@@ -1,3 +1,26 @@
+<?php
+  session_start();
+?>
+
+<?php
+  if(!isset($_SESSION['username'])){
+    Header("Location: ../aboutus.php");
+    die();
+  }
+  else{
+    $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
+    $user_check_query = sprintf("SELECT user_type FROM appuser WHERE login = '%s'", $_SESSION['username']);
+    $results = mysqli_query($db, $user_check_query);
+    $type = $results->fetch_row();
+    if($type[0] == "S"){
+      Header("Location: ../student/aboutus.php");
+      mysqli_close($db);
+      die();
+    }
+    mysqli_close($db);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
