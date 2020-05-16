@@ -51,15 +51,7 @@
     {
       //username not registered
       if($_GET['error'] == 1){
-        $message = "The username you entered is not registered!";
-        echo '<span class="error">';
-        echo "$message";
-        echo '</span>';
-      }
-
-      //incorrect password
-      else if($_GET['error'] == 2){
-        $message = "The password you entered is incorrect!";
+        $message = "The username and/or password you entered is incorrect!";
         echo '<span class="error">';
         echo "$message";
         echo '</span>';

@@ -41,7 +41,7 @@
 
   if($user["pwd"] != $password){              //if the password provided doesn't match what is in the database
     mysqli_close($db);                        //close the database
-    Header("Location: index.php?error=2");    //redirect to home page with an error value of 2 so the page knows which error to display
+    Header("Location: index.php?error=1");    //redirect to home page with an error value of 2 so the page knows which error to display
     session_destroy();                        //prevents further scripts from running
     die();
   }
