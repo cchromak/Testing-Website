@@ -25,9 +25,86 @@
       </button>
     </nav>
   </div>
-  <div class="dashboardLabel">
-    <span>Help</span>
+    <div class="container">
+    <h1 index="greeting" class="display-1">How can we help?</h1>
   </div>
+  
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-auto mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Registration</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Details on how to register</h6>
+                    <p class="card-text">To register, simply click on the link below to get directed here.</p>
+                    <a href="#" class="card-link">Registration Page</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Logging In</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Details on how to login</h6>
+                    <p class="card-text">The user must first register in order to login. To login, click the link below.</p>
+                    <a href="#" class="card-link">Login Page</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Contacting the Authors</h6>
+                    <p class="card-text">If there are additional bugs on the website, you may always contact us so that we can maintain our website.</p>
+                    <a href="#" class="card-link">Contact us</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Assignments</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Check your assignments</h6>
+                    <p class="card-text">Students can check what assignments they were given in order to find out whats due.</p>
+                    <a href="#" class="card-link">Assignments</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Dashboard</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Check your progress!</h6>
+                    <p class="card-text">Students and professors will have their own dashboards, respectively, in order to check their progress.</p>
+                    <a href="#" class="card-link">Students</a>
+                    <a href="#" class="card-link">Professors</a>
+                </div>
+            </div>
+        </div> 
+        <div class="col-auto mb-3">
+            <div class="card" style="width: 18rem;"> 
+                <div class="card-body">
+                    <h5 class="card-title">Grades</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Check (or modify) grades</h6>
+                    <p class="card-text">Students and professors will be able to check and modify grades, respectively.</p>
+                    <a href="#" class="card-link">Students</a>
+                    <a href="#" class="card-link">Professors</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="container">
+    <h1 index="ending" class="display-4">Most Popular Questions</h1>
+    <p class="lead">
+  There are two buttons for the Registration page. Which one do I choose?
+</p>
+	<p class="lead">
+  What if I want to check my students grades' as a professor?
+</p>
+     </div>
+</div>
   <div class ="container">
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

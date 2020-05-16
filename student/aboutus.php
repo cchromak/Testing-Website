@@ -11,11 +11,11 @@
   <div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="p-4" style="background-color: aliceblue">
-        <h4 class="text-black"><a href="student.html" class="no-underline">Student Dashboard</a></h4>
-        <h4 class="text-black"><a href="grades.html" class="no-underline">Grades</a></h4>
+        <h4 class="text-black"><a href="student.php" class="no-underline">Student Dashboard</a></h4>
+        <h4 class="text-black"><a href="grades.php" class="no-underline">Grades</a></h4>
         <h4 class="text-black"><a href="aboutus.php" class="no-underline">About Us</a></h4>
-        <h4 class="text-black"><a href="contactus.html" class="no-underline">Contact Us</a></h4>
-        <h4 class="text-black"><a href="help.html" class="no-underline">Help</a></h4>
+        <h4 class="text-black"><a href="contactus.php" class="no-underline">Contact Us</a></h4>
+        <h4 class="text-black"><a href="help.php" class="no-underline">Help</a></h4>
         <h4 class="text-black"><a href="../logout.php" class="no-underline">Log out</a></h4>
       </div> 
     </div>
