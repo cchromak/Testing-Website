@@ -16,7 +16,7 @@
         <h4 class="text-black"><a href="aboutus.php" class="no-underline">About Us</a></h4>
         <h4 class="text-black"><a href="contactus.php" class="no-underline">Contact Us</a></h4>
         <h4 class="text-black"><a href="help.php" class="no-underline">Help</a></h4>
-        <h4 class="text-black"><a href="../index.php" class="no-underline">Log out</a></h4>
+        <h4 class="text-black"><a href="../logout.php" class="no-underline">Log out</a></h4>
       </div>
     </div>
     <nav class="navbar navbar-light" style="background-color: aliceblue">

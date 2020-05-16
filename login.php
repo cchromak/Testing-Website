@@ -12,10 +12,10 @@
     $results = mysqli_query($db, $user_check_query);
     $type = $results->fetch_row();
     if($type[0] == "S"){
-      Header("Location: ./student/student.html");
+      Header("Location: ./student/student.php");
     }
     else{
-      Header("Location: ./professor/professor.html");
+      Header("Location: ./professor/professor.php");
     }
     mysqli_close($db);
     die();
@@ -54,11 +54,11 @@
   //if the username and password match, we have to get the account_type
   if($user["user_type"] === "S"){
     mysqli_close($db);
-    Header("Location: ./student/student.html");       //redirect to student.html
+    Header("Location: ./student/student.php");       //redirect to student.html
   }
   else{
     mysqli_close($db);                                //close the database
-    Header("Location: ./professor/professor.html");   //redirect to professor.html
+    Header("Location: ./professor/professor.php");   //redirect to professor.html
   }
   mysqli_close($db);                                  //in case anything happens and we don't close the database close it here
 ?>
