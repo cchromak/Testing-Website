@@ -1,3 +1,13 @@
+<?php
+  session_start();
+?>
+
+<?php
+  if(isset($_SESSION['username'])){
+    Header("Location: login.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
