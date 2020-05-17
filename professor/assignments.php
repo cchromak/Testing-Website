@@ -54,7 +54,7 @@
     <h1 class="display-1">Assignments</h1>
   </div>
   <h1 class="display-1">Create a new Assignment</h1>
-  <form action="/kevinNameThisJoint.php" id="form">
+  <form action="/kevinNameThisJoint.php" id="form">   <!-- go to page that will add assignment to db -->
     <div class="form-group">
       <input type="text" class="form-control" name="title" placeholder="Enter Assignment Name" onkeyup="checkFields()">
     </div>

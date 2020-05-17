@@ -58,9 +58,9 @@
       <div class="form-group">
         <input type="title" class="form-control" name="title" placeholder="Enter Question Title" onkeyup="checkFields()">
       </div>
-      <input type="radio" name="type" value="MC" checked>
+      <input type="radio" id="mc" name="type" value="MC" checked>
       <label for="mc">Multiple choice</label><br>
-      <input type="radio" name="type" value="WA">
+      <input type="radio" id="wa" name="type" value="WA">
       <label for="wa">Word answer</label><br><br>
       <textarea rows="4" cols="50" name="question" form="form" placeholder="Enter question here..."></textarea><br><br>
       <div class="form-group">

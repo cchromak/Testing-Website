@@ -60,10 +60,10 @@
   </div>
 
   <?php
-  $_GET['set'];
+  $qsetID = $_GET['set'];
 
   $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
-  $sql = sprintf("SELECT title FROM questionset WHERE questionset_id = '%s' LIMIT 1", $_GET['set']);
+  $sql = "SELECT title FROM questionset WHERE questionset_id = '$qsetID' LIMIT 1";
   $results = mysqli_query($db, $sql);
   $row = $results->fetch_row();
 
@@ -73,7 +73,21 @@
 
   ?>
   <div class ="container">
-    
+    <form>
+      <div>
+        <input type="checkbox">
+        <?php
+          $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
+          $sql = "SELECT * FROM question";
+          $results = mysqli_query($db, $sql);
+          while($row = $results->fetch_row()){
+            echo '<div class="container">';
+              echo '<input type="checkbox" value="">';
+            echo "</div>";
+          }
+        ?>
+      </div>
+    </form>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
