@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +12,7 @@
 <body>
     
     <div class="container">
-        <h1 index="greeting" class="display-1">Grading Notebook</h1>
+        <h1 index="greeting" class="display-1 h1">Grading Notebook</h1>
         
     </div>
 
@@ -26,15 +28,17 @@
 		  <tbody> 
 		     <?php 
 		     $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
-		     while ($row = mysqli_fetch_array($result)) { 
-    	echo "<tr>
-        <td>" . $row[0] . "</td>  
-        <td>" . $row[1] . "</td>
-        <td>" . $row[2] . "</td> 
-        <td>" . $row[3] . "</td>
-        <td>" . $row[4] . "</td>
-      </tr>"; 
-  		?>
+             $sql_grades_receiver = "SELECT grade FROM grades";
+            $results = mysqli_query($db, $sql_grades_receiver);
+		     while ($row = $results->fetch_row()) { 
+                	echo "<tr>
+                    <td> id </td>  
+                    <td> titty </td>
+                    <td> man </td> 
+                    <td>" . $row[0] . "</td>
+                  </tr>"; 
+            }
+        ?>
 		  </tbody>
 		</table>
 
