@@ -33,8 +33,8 @@
 		     while ($row = $results->fetch_row()) { 
                 	echo "<tr>
                     <td> id </td>  
-                    <td> titty </td>
-                    <td> man </td> 
+                    <td> First </td>
+                    <td> Last </td> 
                     <td>" . $row[0] . "</td>
                   </tr>"; 
             }
