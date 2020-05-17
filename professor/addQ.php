@@ -75,16 +75,27 @@
   <div class ="container">
     <form>
       <div>
-        <input type="checkbox">
         <?php
           $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
           $sql = "SELECT * FROM question";
           $results = mysqli_query($db, $sql);
           while($row = $results->fetch_row()){
+            if($row[2] == "MC"){
+              $type_word = "Multiple Choice";
+            }
+            else {
+              $type_word = "Word Answer";
+            }
             echo '<div class="container">';
-              echo '<input type="checkbox" value="">';
+              echo sprintf('<input type="checkbox" value=%s name="question[]">', $row[0]);
+              echo $row[3];
+              echo '<br>';
+              echo 'Type: ' . $type_word . '<br>';
+              echo '<label for="points">Point Value</label>';
+              echo '<input name="points" type="number" min="0.5" step="0.5" value="1">';
             echo "</div>";
           }
+          sprintf("SELECT user_type FROM appuser WHERE login = '%s'", $_SESSION['username']);
         ?>
       </div>
     </form>
