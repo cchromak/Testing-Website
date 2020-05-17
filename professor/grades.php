@@ -14,6 +14,7 @@
         <h4 class="text-black"><a href="professor.php" class="no-underline">Professor Dashboard</a></h4>
         <h4 class="text-black"><a href="makeQuestions.php" class="no-underline">Create Questions</a></h4>
         <h4 class="text-black"><a href="assignments.php" class="no-underline">Assignments</a></h4>
+        <h4 class="text-black"><a href="grades.php" class="no-underline">Grades</a></h4>
         <h4 class="text-black"><a href="aboutus.php" class="no-underline">About Us</a></h4>
         <h4 class="text-black"><a href="contactus.php" class="no-underline">Contact Us</a></h4>
         <h4 class="text-black"><a href="help.php" class="no-underline">Help</a></h4>
