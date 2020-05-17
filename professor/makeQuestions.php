@@ -56,7 +56,7 @@
   <div 
   >
 
-    <form action="/kevinNameThisJoint.php" id="form">
+    <form action="/question.php" method="post" id="form">
       <div class="form-group">
         <input type="title" class="form-control" name="title" placeholder="Enter Question Title" onkeyup="checkFields()">
       </div>
@@ -64,13 +64,12 @@
       <label for="mc">Multiple choice</label><br>
       <input type="radio" name="wa">
       <label for="wa">Word answer</label><br><br>
-      <textarea rows="4" cols="50" name="comment" form="usrform">
-       Enter question here.. </textarea><br><br>
-       <div class="form-group">
+      <textarea rows="4" cols="50" name="question" form="usrform">Enter question here.. </textarea><br><br>
+      <div class="form-group">
         <input type="answer" class="form-control" name="answer" placeholder="Enter Answer" onkeyup="checkFields()">
       </div>
       <div class="container">
-        <button type="submit" name="submitAnswer" class="grayedOut btn btn-secondary" disabled>Create Question<span> </span></button>
+        <button type="submit" name="answer" class="grayedOut btn btn-secondary" disabled>Create Question<span> </span></button>
       </div>
     </form>
     
