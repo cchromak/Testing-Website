@@ -24,13 +24,13 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    </nav>
+    </nav> 
   </div>
-  <div class="container">
+  <div class="container" style="background-color: aliceblue">
     <h1 index="greeting" class="display-1 h1">Grading Notebook</h1>
   </div>
-  <table class="table">
-    <thead class="thead-dark">
+  <table class="table" style="background-color: aliceblue"> 		
+    <thead class="thead-dark" style="background-color: aliceblue">
       <tr>
         <th scope="col">#</th>
         <th scope="col">First Name</th>
@@ -38,7 +38,7 @@
         <th scope="col">Grades</th>
       </tr> 
     </thead>
-    <tbody> 
+    <tbody style="background-color: aliceblue"> 
       <?php 
         $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
         $sql_grades_receiver = "SELECT grade FROM grades";
@@ -47,16 +47,24 @@
         echo "<tr>
         <td> 1 </td>  
         <td> Charly </td>
+<<<<<<< HEAD
         <td> Gomez </td> 
+=======
+        <td> Gomez </td>  
+>>>>>>> d3c2a8020421a8f9b7b1bb157045e1fc95aeceaa
         <td>" . $row[0] . "</td>
         </tr>";
-        $row = $results->fetch_row();
+        $row = $results->fetch_row(); 
         echo "<tr>
         <td> 2 </td>  
         <td> Kevin </td>
         <td> Cardenas </td> 
         <td>" . $row[0] . "</td>
+<<<<<<< HEAD
         </tr>";
+=======
+        </tr>"; 
+>>>>>>> d3c2a8020421a8f9b7b1bb157045e1fc95aeceaa
         $row = $results->fetch_row();
         echo "<tr>
         <td> 3 </td>  
@@ -66,7 +74,8 @@
         </tr>";
       ?>
     </tbody>
-  </table>  
+     
+  </table> 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
