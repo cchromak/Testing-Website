@@ -4,10 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="basicStyle.css">
+  <link rel="stylesheet" href="styleIndex.css">
   <title>Teacher's Lounge</title>
 </head>
 <body>
+	<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="p-4" style="background-color: aliceblue">
+        <h4 class="text-black"><a href="professor.php" class="no-underline">Professor Dashboard</a></h4>
+        <h4 class="text-black"><a href="makeQuestions.php" class="no-underline">Create Questions</a></h4>
+        <h4 class="text-black"><a href="assignments.php" class="no-underline">Assignments</a></h4>
+        <h4 class="text-black"><a href="aboutus.php" class="no-underline">About Us</a></h4>
+        <h4 class="text-black"><a href="contactus.php" class="no-underline">Contact Us</a></h4>
+        <h4 class="text-black"><a href="help.php" class="no-underline">Help</a></h4>
+        <h4 class="text-black"><a href="../logout.php" class="no-underline">Log out</a></h4>
+      </div>
+    </div>
+    <nav class="navbar navbar-light" style="background-color: aliceblue">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
   <div class="container">
     <h1 index="greeting" class="display-1 h1">Grading Notebook</h1>
   </div>
@@ -28,17 +46,18 @@
         $row = $results->fetch_row();
         echo "<tr>
         <td> 1 </td>  
-        <td> Kevin </td>
-        <td> Cardenas </td> 
+        <td> Charly </td>
+        <td> Gomez </td> 
         <td>" . $row[0] . "</td>
         </tr>";
         $row = $results->fetch_row();
         echo "<tr>
         <td> 2 </td>  
-        <td> Charly </td>
-        <td> Gomez </td> 
+        <td> Kevin </td>
+        <td> Cardenas </td> 
         <td>" . $row[0] . "</td>
-        </tr>";$row = $results->fetch_row();
+        </tr>";
+        $row = $results->fetch_row();
         echo "<tr>
         <td> 3 </td>  
         <td> Chris </td>
