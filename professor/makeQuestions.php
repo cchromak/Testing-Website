@@ -62,7 +62,7 @@
       <label for="mc">Multiple choice</label><br>
       <input type="radio" name="type" value="WA">
       <label for="wa">Word answer</label><br><br>
-      <textarea rows="4" cols="50" name="question" form="form">Enter question here.. </textarea><br><br>
+      <textarea rows="4" cols="50" name="question" form="form" placeholder="Enter question here..."></textarea><br><br>
       <div class="form-group">
         <input type="answer" class="form-control" name="answer" placeholder="Enter Answer" onkeyup="checkFields()">
       </div>
