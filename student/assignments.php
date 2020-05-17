@@ -50,7 +50,7 @@
     </nav>
   </div>
   <div class="dashboardLabel">
-    <span>Here Is Your Student Dashboard</span>
+    <span>Here Are Your Assignments</span>
   </div>
   <div class ="container">
   </div>
