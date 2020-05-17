@@ -59,12 +59,33 @@
       <div class="form-group">
         <input type="title" class="form-control" name="title" placeholder="Enter Question Title" onkeyup="checkFields()">
       </div>
-      <input type="radio" id="mc" name="type" value="MC" checked>
+      <input type="radio" id="mc" name="type" value="MC" onclick="checkType()" checked>
       <label for="mc">Multiple choice</label><br>
-      <input type="radio" id="wa" name="type" value="WA">
+      <input type="radio" id="wa" name="type" value="WA" onclick="checkType()">
       <label for="wa">Word answer</label><br><br>
+      <!-- add 4 text input fields if MC is chosen, with all grayed out until the one before it is filled, then format it to send with <a>, <b>, <c>, then use string delimiter to show them in addQ.php -->
       <textarea rows="4" cols="50" name="question" form="form" placeholder="Enter question here..."></textarea><br><br>
+      <div id="mcChoices">
+        <div class="form-group">
+          <label for="choice1"> Choice 1 </label> <br>
+          <input type="text" class="form-control" id="choice1" name="choice1" onkeyup="enableFields()">
+        </div>
+        <div class="form-group">
+          <label for="choice2"> Choice 2 </label> <br>
+          <input type="text" class="form-control" id="choice2" name="choice2" onkeyup="enableFields()" disabled>
+        </div>
+        <div class="form-group">
+          <label for="choice3"> Choice 3 </label> <br>
+          <input type="text" class="form-control" id="choice3" name="choice3" onkeyup="enableFields()" disabled>
+        </div>
+        <div class="form-group">
+          <label for="choice4"> Choice 4 </label> <br>
+          <input type="text" class="form-control" id="choice4" name="choice4" onkeyup="enableFields()" disabled>
+        </div> 
+      </div>     
       <div class="form-group">
+        <br>
+        <label for="answer"> Correct Answer: </label> <br>
         <input type="answer" class="form-control" name="answer" placeholder="Enter Answer" onkeyup="checkFields()">
       </div>
       <div class="container">
@@ -72,6 +93,7 @@
       </div>
     </form>
   </div>
+  <script src="questiontype.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
