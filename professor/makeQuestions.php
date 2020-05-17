@@ -53,27 +53,23 @@
   <div class="container">
     <h1 class="display-1">Write your question</h1>
   </div>
-  <div 
-  >
-
-    <form action="/question.php" method="post" id="form">
+  <div>
+    <form action="question.php" method="POST" id="form">
       <div class="form-group">
         <input type="title" class="form-control" name="title" placeholder="Enter Question Title" onkeyup="checkFields()">
       </div>
-      <input type="radio" name="mc">
+      <input type="radio" name="type" value="MC" checked>
       <label for="mc">Multiple choice</label><br>
-      <input type="radio" name="wa">
+      <input type="radio" name="type" value="WA">
       <label for="wa">Word answer</label><br><br>
-      <textarea rows="4" cols="50" name="question" form="usrform">Enter question here.. </textarea><br><br>
+      <textarea rows="4" cols="50" name="question" form="form">Enter question here.. </textarea><br><br>
       <div class="form-group">
         <input type="answer" class="form-control" name="answer" placeholder="Enter Answer" onkeyup="checkFields()">
       </div>
       <div class="container">
-        <button type="submit" name="answer" class="grayedOut btn btn-secondary" disabled>Create Question<span> </span></button>
+        <button type="submit" name="create" class="grayedOut btn btn-secondary">Create Question<span> </span></button>
       </div>
     </form>
-    
-
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
