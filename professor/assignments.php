@@ -52,9 +52,10 @@
   </div>
 
   <div class="container">
-    <h1 class="display-1">Assignments</h1>
-  </div>
+   <!--  <h1 class="display-1">Assignments</h1>  -->
+  
   <h1 class="display-1">Create a new Assignment</h1>
+  
   <form action="/kevinNameThisJoint.php" id="form">   <!-- go to page that will add assignment to db -->
     <div class="form-group">
       <input type="text" class="form-control" name="title" placeholder="Enter Assignment Name" onkeyup="checkFields()">
@@ -63,7 +64,7 @@
       <button type="submit" name="createAssignment" class="grayedOut btn btn-secondary" disabled>Create Assignment<span> </span></button>
     </div>
   </form>
-  <h1 class="display-1">Select an assignment below to add questions to it</h1>
+  <h1 class="display-1">or select an assignment below to work in.</h1>
   <div>
     <?php
       $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");  //select question_sets from database
