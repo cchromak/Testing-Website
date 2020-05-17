@@ -53,17 +53,29 @@
   <div class="container">
     <h1 class="display-1">Assignments</h1>
   </div>
+  <h1 class="display-1">Create a new Assignment</h1>
+  <form action="/kevinNameThisJoint.php" id="form">
+    <div class="form-group">
+      <input type="text" class="form-control" name="title" placeholder="Enter Assignment Name" onkeyup="checkFields()">
+    </div>
+    <div class="container">
+      <button type="submit" name="createAssignment" class="grayedOut btn btn-secondary" disabled>Create Assignment<span> </span></button>
+    </div>
+  </form>
+  <h1 class="display-1">Select an assignment below to add questions to it</h1>
   <div>
     <?php
       $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");  //select question_sets from database
-      $sql = "SELECT title from questionset";
+      $sql = "SELECT * from questionset";
       $results = mysqli_query($db, $sql);
       while($row = $results->fetch_row()){
         //create a div to hold each assignment
         echo '<div class="aList">';
-        echo sprintf("<span> %s </span>", $row[0]);
+        echo sprintf("<a href=addQ.php?set=%s>", $row[0]);
+        echo sprintf("%s </a>", $row[1]);
         echo '</div>';
       }
+      mysqli_close($db);
     ?>
   </div>
   <div class ="container">
