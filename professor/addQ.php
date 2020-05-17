@@ -74,30 +74,47 @@
 
   ?>
   <div class ="container">
-    <form>
+    <?php echo sprintf('<form action="addQdb.php?set=%s" method="POST"', $_GET['set']); ?>
       <div>
         <?php
           $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
           $sql = "SELECT * FROM question";
           $results = mysqli_query($db, $sql);
+          $index = 1;
           while($row = $results->fetch_row()){
             if($row[2] == "MC"){
               $type_word = "Multiple Choice";
+              $questionstart = $row[3];
+              if(strpos($questionstart, "<d>")){
+                $question = substr($questionstart, 0, strpos($questionstart, '<a>')) . "<br>a) " . substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3) . "<br> b) " . substr($questionstart, strpos($questionstart, "<b>") + 3, strpos($questionstart, "<c>") - strpos($questionstart, "<b>") - 3) . "<br> c) " . substr($questionstart, strpos($questionstart, "<c>") + 3, strpos($questionstart, "<d>") - strpos($questionstart, "<c>") - 3) . "<br> d) " . substr($questionstart, strpos($questionstart, "<d>") + 3, strlen($questionstart) - strpos($questionstart, "<a>") - 3);
+              }
+              else if(strpos($questionstart, "<c>")){
+                $question = substr($questionstart, 0, strpos($questionstart, '<a>')) . "<br>a) " . substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3) . "<br> b) " . substr($questionstart, strpos($questionstart, "<b>") + 3, strpos($questionstart, "<c>") - strpos($questionstart, "<b>") - 3) . "<br> c) " . substr($questionstart, strpos($questionstart, "<c>") + 3, strlen($questionstart) - strpos($questionstart, "<c>") - 3);
+              }
+              else if(strpos($questionstart, "<b>")){
+                $question = substr($questionstart, 0, strpos($questionstart, '<a>')) . "<br>a) " . substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3) . "<br> b) " . substr($questionstart, strpos($questionstart, "<b>") + 3, strlen($questionstart) - strpos($questionstart, "<b>") - 3);
+              }
+              else{
+                $question = substr($questionstart, 0, strpos($questionstart, '<a>')) . "<br>a) " . substr($questionstart, strpos($questionstart, "<a>") + 3, strlen($questionstart) - strpos($questionstart, "<a>") - 3);
+              }
             }
             else {
               $type_word = "Word Answer";
+              $question = $row[3];
             }
             echo '<div class="container">';
-              echo sprintf('<input type="checkbox" value=%s name="question[]">', $row[0]);
-              echo $row[3];
+              echo sprintf('<input type="checkbox" value="%s" name="question%s">', $row[0], $index);
+              echo $question;
               echo '<br>';
               echo 'Type: ' . $type_word . '<br>';
               echo '<label for="points">Point Value</label>';
-              echo '<input name="points" type="number" min="0.5" step="0.5" value="1">';
+              echo sprintf('<input name="points%s" type="number" min="0.5" step="0.5" value="1">', $index++);
             echo "</div>";
+            echo "<br> <br>";
           }
-          sprintf("SELECT user_type FROM appuser WHERE login = '%s'", $_SESSION['username']);
+          mysqli_close($db);
         ?>
+        <button type="submit"> Submit </button>
       </div>
     </form>
   </div>
