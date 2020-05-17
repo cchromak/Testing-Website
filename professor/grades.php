@@ -47,11 +47,7 @@
         echo "<tr>
         <td> 1 </td>  
         <td> Charly </td>
-<<<<<<< HEAD
-        <td> Gomez </td> 
-=======
         <td> Gomez </td>  
->>>>>>> d3c2a8020421a8f9b7b1bb157045e1fc95aeceaa
         <td>" . $row[0] . "</td>
         </tr>";
         $row = $results->fetch_row(); 
@@ -60,11 +56,7 @@
         <td> Kevin </td>
         <td> Cardenas </td> 
         <td>" . $row[0] . "</td>
-<<<<<<< HEAD
-        </tr>";
-=======
         </tr>"; 
->>>>>>> d3c2a8020421a8f9b7b1bb157045e1fc95aeceaa
         $row = $results->fetch_row();
         echo "<tr>
         <td> 3 </td>  
