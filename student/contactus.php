@@ -66,8 +66,9 @@
       <div class="form-group"></div>
         <textarea name="message" placeholder="What do you want to tell us?"></textarea>
       </div>
-      <div class="form-group">
-        <button onclick="EmailReply()" type="submit" name="submit">SEND</button>
+      <div class="container">
+      	<br>
+        <button onclick="EmailReply()" class="grayedOut btn btn-secondary" type="submit" name="submit">SEND</button>
       </div>
     </form>
   </main>
