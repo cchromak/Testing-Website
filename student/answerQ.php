@@ -54,7 +54,105 @@
   </div>
 
   <!-- Insert php where we would get the questions associated with the questionset_id from questionset_questions -->
-
+  <div class="container">
+    <?php echo sprintf('<form action="submitanswers.php?set=%s" method="POST" id="answers">', $_GET['set']); ?>
+      <?php
+        $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
+        $sql = sprintf("SELECT * FROM questionset_question where questionset_id = %s", $_GET['set']);
+        $qresults = mysqli_query($db, $sql);
+        while($qrow = $qresults->fetch_row()){
+          $sql = sprintf("SELECT * FROM question WHERE question_id = %s", $qrow[1]);
+          $results = mysqli_query($db, $sql);
+          while($row = $results->fetch_row()){
+            if($row[2] == "MC"){
+              $questionstart = $row[3];
+              if(strpos($questionstart, "<d>")){
+                echo '<div class="container">';
+                  echo 'Point Value: ';
+                  echo $qrow[2];
+                  echo '<br>';
+                  echo substr($questionstart, 0, strpos($questionstart, '<a>'));
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3);
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<b>") + 3, strpos($questionstart, "<c>") - strpos($questionstart, "<b>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<b>") + 3, strpos($questionstart, "<c>") - strpos($questionstart, "<b>") - 3);
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<c>") + 3, strpos($questionstart, "<d>") - strpos($questionstart, "<c>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<c>") + 3, strpos($questionstart, "<d>") - strpos($questionstart, "<c>") - 3);
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<d>") + 3, strlen($questionstart) - strpos($questionstart, "<a>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<d>") + 3, strlen($questionstart) - strpos($questionstart, "<a>") - 3);
+                echo "</div>";
+                echo "<br> <br>";
+              }
+              else if(strpos($questionstart, "<c>")){
+                echo '<div class="container">';
+                  echo 'Point Value: ';
+                  echo $qrow[2];
+                  echo '<br>';
+                  echo substr($questionstart, 0, strpos($questionstart, '<a>'));
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3);
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<b>") + 3, strpos($questionstart, "<c>") - strpos($questionstart, "<b>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<b>") + 3, strpos($questionstart, "<c>") - strpos($questionstart, "<b>") - 3);
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<c>") + 3, strlen($questionstart) - strpos($questionstart, "<c>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<c>") + 3, strlen($questionstart) - strpos($questionstart, "<c>") - 3);
+                echo "</div>";
+                echo "<br> <br>";
+              }
+              else if(strpos($questionstart, "<b>")){
+                echo '<div class="container">';
+                  echo 'Point Value: ';
+                  echo $qrow[2];
+                  echo '<br>';
+                  echo substr($questionstart, 0, strpos($questionstart, '<a>'));
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<a>") + 3, strpos($questionstart, "<b>") - strpos($questionstart, "<a>") - 3);
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<b>") + 3, strlen($questionstart) - strpos($questionstart, "<b>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<b>") + 3, strlen($questionstart) - strpos($questionstart, "<b>") - 3);
+                echo "</div>";
+                echo "<br> <br>";
+              }
+              else{
+                echo '<div class="container">';
+                  echo 'Point Value: ';
+                  echo $qrow[2];
+                  echo '<br>';
+                  echo substr($questionstart, 0, strpos($questionstart, '<a>'));
+                  echo '<br>';
+                  echo sprintf('<input type="radio" name="%s" value=%s>', $row[0], substr($questionstart, strpos($questionstart, "<a>") + 3, strlen($questionstart) - strpos($questionstart, "<a>") - 3));
+                  echo substr($questionstart, strpos($questionstart, "<a>") + 3, strlen($questionstart) - strpos($questionstart, "<a>") - 3);
+                echo "</div>";
+                echo "<br> <br>";
+              }
+            }
+            else {
+              $type_word = "Word Answer";
+              $question = $row[3];
+              echo '<div class="container">';
+                echo 'Point Value: ';
+                echo $qrow[2];
+                echo '<br>';
+                echo $question;
+                echo '<br>';
+                echo sprintf('<textarea rows="4" cols="50" name="%s" form="answers" placeholder="Enter Answer here..."></textarea><br><br>', $row[0]);
+                echo '<br> <br>';
+              echo "</div>";
+            }
+          }
+        }
+        echo '<button type="submit"> Submit </button> <br> <br>';
+        mysqli_close($db);
+      ?>
+    </form>
+  </div>
 
   <div class ="container">
   </div>
