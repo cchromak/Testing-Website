@@ -78,6 +78,19 @@ button[disabled] > span{
     
     }
 }
+@media only screen and (max-width: 980px) {
+   form{
+    padding: 2% 30% 0 30%;
+   }
+ 
+    
+}
+@media only screen and (max-width: 450px) {
+   .display-1{
+    font-size:15vw;
+   }
+ 
+}
 .dashboardLabel{
     padding: 8px 16px;
     background-color: #656c99;
