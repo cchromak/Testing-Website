@@ -3,8 +3,6 @@
 ?>
 
 <?php
-
-<?php
   if(!isset($_SESSION['username'])){
     Header("Location: ../index.php");
     die();
@@ -23,6 +21,7 @@
   }
 ?>
 
+<?php
 $title = $_POST['title'];
 $question = $_POST['question'];
 $answer = $_POST['answer'];
@@ -67,17 +66,4 @@ if($db->query($sql) === FALSE){
 
   //add error handling if errors exist
   $db->close();
-?>
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
