@@ -55,7 +55,7 @@
 
   <!-- Insert php where we would get the questions associated with the questionset_id from questionset_questions -->
   <div class="container">
-    <form action="submitanswers.php" method="POST" id="answers">
+    <?php echo sprintf('<form action="submitanswers.php?set=%s" method="POST" id="answers">', $_GET['set']); ?>
       <?php
         $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");
         $sql = sprintf("SELECT * FROM questionset_question where questionset_id = %s", $_GET['set']);
@@ -141,6 +141,7 @@
                 echo $qrow[2];
                 echo '<br>';
                 echo $question;
+                echo '<br>';
                 echo sprintf('<textarea rows="4" cols="50" name="%s" form="answers" placeholder="Enter Answer here..."></textarea><br><br>', $row[0]);
                 echo '<br> <br>';
               echo "</div>";
