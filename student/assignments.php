@@ -49,8 +49,8 @@
       </button>
     </nav>
   </div>
-  <div class="dashboardLabel">
-    <span>Here Are Your Assignments</span>
+  <div class="container">
+    <h1 class="display-1">Assignments</h1>
   </div>
   <div>
     <?php
@@ -74,18 +74,3 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<?php
-/*      $db = mysqli_connect('mars.cs.qc.cuny.edu', 'cake2827', '23682827', 'cake2827') or die("could not connect to database");  //select question_sets from database
-      $sql = "SELECT * from questionset";
-      $results = mysqli_query($db, $sql);
-      while($row = $results->fetch_row()){
-        //create a div to hold each assignment
-        echo '<div class="aList">';
-        echo sprintf("<a href=addQ.php?set=%s>", $row[0]);
-        echo sprintf("%s </a>", $row[1]);
-        echo '</div>';
-      }
-      mysqli_close($db);
-*/
-      ?>

@@ -49,8 +49,8 @@
       </button>
     </nav>
   </div>
-  <div class="dashboardLabel">
-    <span>Here Are the questions for this Assignments</span>
+  <div class="container">
+    <h1 class="display-1">Questions</h1>
   </div>
 
   <!-- Insert php where we would get the questions associated with the questionset_id from questionset_questions -->
