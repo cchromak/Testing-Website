@@ -63,13 +63,13 @@
 	</div>
 	
 	  <div class="container mt-4">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
         <div class="col-auto mb-3">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Create Questions</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Ask anything!</h6>
-                    <p class="card-text">Assign your students questions by clicking the link below.</p>
+                    <p class="card-text">Assign your students questions by clicking the link below.</p><br>
                     <a href="https://venus.cs.qc.cuny.edu/~cake2827/epic/professor/makeQuestions.php" class="card-link">Create Questions Page</a>
                 </div>
             </div>
