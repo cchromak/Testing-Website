@@ -74,6 +74,13 @@
       </div>
     </form>
   </div>
+  
+  <div>
+  <blockquote class="blockquote text-center">
+  <p class="mb-0"> Made with <span style="color: #e25555;">&hearts;</span> by Charly, Chris, Kevin and Patricio </p>
+  
+</blockquote>
+  </div>
 
   <!-- Javascript files -->
   <script src="verify.js"></script>
