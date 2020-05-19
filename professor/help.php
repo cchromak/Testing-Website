@@ -34,11 +34,14 @@
 	<div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="p-4" style="background-color: aliceblue">
-        <h4 class="text-black"><a href="index.php" class="no-underline">Log in</a></h4>
-        <h4 class="text-black"><a href="register.php" class="no-underline">Register</a></h4>
+        <h4 class="text-black"><a href="professor.php" class="no-underline">Professor Dashboard</a></h4>
+        <h4 class="text-black"><a href="makeQuestions.php" class="no-underline">Create Questions</a></h4>
+        <h4 class="text-black"><a href="assignments.php" class="no-underline">Assignments</a></h4>
+        <!--<h4 class="text-black"><a href="grades.php" class="no-underline">Grades</a></h4>-->
         <h4 class="text-black"><a href="aboutus.php" class="no-underline">About Us</a></h4>
-        <h4 class="text-black"><a href="contactus.html" class="no-underline">Contact Us</a></h4>
-        <h4 class="text-black"><a href="help.html" class="no-underline">Help</a></h4>
+        <h4 class="text-black"><a href="contactus.php" class="no-underline">Contact Us</a></h4>
+        <h4 class="text-black"><a href="help.php" class="no-underline">Help</a></h4>
+        <h4 class="text-black"><a href="../logout.php" class="no-underline">Log out</a></h4>
       </div>
     </div>
     <nav class="navbar navbar-light" style="background-color: aliceblue">
@@ -47,7 +50,7 @@
       </button>
     </nav>
   </div>
-    <div class="container">
+  <div class="container">
     <h1 index="greeting" class="display-1">How can we help?</h1>
   </div>
   <div class="container">
