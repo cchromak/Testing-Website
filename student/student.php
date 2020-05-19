@@ -79,7 +79,7 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Assignments</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Take an assignments</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Take an assignment</h6>
                     <p class="card-text">The student can take multiple assingments given to them by their professor.</p>
                     <a href="https://venus.cs.qc.cuny.edu/~cake2827/epic/student/assignments.php" class="card-link">Take Assignment</a>
                 </div>
