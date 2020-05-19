@@ -50,10 +50,6 @@
       </button>
     </nav>
   </div>
-
-  <div class="container">
-    <h1 class="display-1">Assignments</h1>
-  </div>
   <div class="container">
   <h1 class="display-2">Create a new Assignment</h1>
   </div>

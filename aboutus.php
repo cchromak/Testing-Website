@@ -28,7 +28,6 @@
     </nav>
   </div>
 
-  <!-- I'm kinda confused by this whole div -->
   <div class="container">
     <style>
     h2	{text-align: left;}
@@ -37,14 +36,28 @@
     <h1 class="display-1">About Us</h1>
     <h3>All about who we are!</h3>
     <h2>Kevin Cardenas</h2>
-    <p> Splatoon goon </p>
+    <p> I am currently a Senior at Queens College looking into web development as a potential career path to follow. 
+        In developing this website I served as Project Manager and oversaw the work of my peers while also recommending 
+        different strategies and implementing them myself both on front-end and back-end. This experience has made me 
+        realize my inclination towards back-end development in the near future.
+    </p>
     <h2>Chris Chromak</h2>
-    <img src="img/cchromak.png" alt="Chris Chromak" align="left" style="border:2px solid black" class="header-photo img-fluid">
-    <p> The daddy </p>
+    <p> I have a huge interest in big data and how it can be analyzed to see trends and patterns related to our lives. 
+        For this project, I was involved in both the front end concerning styling as well the back end with the construction 
+        of the database. By Fall 2021, I'm expected to graduate and to start working for you. Please hire me.  
+    </p>
     <h2>Charly Gomez</h2>
-    <p> Soup lover </p>
+    <p> I am a junior in Queens College with front-end development and data analytics as my interests. 
+        In this project, I served as the front-end developer, and collaborated with my teammates for the design. 
+        I am expected to graduate in Spring 2021, and I hope I can work for as either a front-end developer or in data analytics.
+    </p>
     <h2>Patricio Tapia</h2> 
-    <p> Tapz </p>
+    <p> I am a current senior at Queens College, 
+        my current interest is in robotics and thus have leaned more toward the hardware aspects of computers. 
+        However, web development also is an interest of mine because it's one of the sides of Computer Science that is devloping rapidly, 
+        I personally enjoy the back-end side of web development. 
+        I graduate in the Fall of 2020 and hope to get more experience in the field by then! 
+    </p>
   </div>
 
   <!-- Javascript -->
