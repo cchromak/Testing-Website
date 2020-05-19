@@ -57,12 +57,12 @@
   <div class="container">
   <h1 class="display-2">Create a new Assignment</h1>
   </div>
-  <form action="/kevinNameThisJoint.php" id="form">   <!-- go to page that will add assignment to db -->
+  <form action="addAssignment.php" method="POST" id="form">   <!-- go to page that will add assignment to db -->
     <div class="form-group">
       <input type="text" class="form-control" name="title" placeholder="Enter Assignment Name" onkeyup="checkFields()">
     </div>
     <div class="container">
-      <button type="submit" name="createAssignment" class="grayedOut btn btn-secondary" disabled>Create Assignment<span> </span></button>
+      <button type="submit" name="createAssignment" class="grayedOut btn btn-secondary">Create Assignment<span> </span></button>
     </div>
   </form>
   <div class="container">
