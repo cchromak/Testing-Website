@@ -119,14 +119,17 @@
         </div>
     </div>
 </div>
-  <div class="container">
-    <h1 index="ending" class="display-4">Most Popular Questions</h1>
+   <div class="container">
+    <h1 index="ending" class="display-4">Frequently Asked Questions</h1>
     <p class="lead">
   There are two buttons for the Registration page. Which one do I choose?
-</p>
+	</p>
+	<p class="text-center">Register accordingly to what you are. If you are a student, then choose student.
+	If you aren't a student, choose professor if you're a professor.</p>
 	<p class="lead">
   What if I want to check my students grades' as a professor?
-</p>
+  <p class="text-center">Login as a professor, then in the Professor Dashboard, click on the "Grades" card link.</p>
+	</p>
      </div>
 </div>
   <div class ="container">
