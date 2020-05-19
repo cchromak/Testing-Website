@@ -17,6 +17,26 @@
       mysqli_close($db);
       die();
     }
+
+    //get student id#
+    $sql = sprintf("SELECT user_id FROM appuser WHERE login='%s'", $_SESSION['username']);
+    $userID = mysqli_query($db, $sql);
+    $userID = $userID->fetch_row();
+    $userID = $userID[0];
+    //check to see if assignment was complete
+    $sql = sprintf("SELECT count(question_id) FROM questionset_question WHERE questionset_id=%d", $_GET['set']);
+    $count = mysqli_query($db, $sql);
+    $AQcount = $count->fetch_row();
+    $AQcount = $AQcount[0]; //the number of questions in the assignment
+    $sql = sprintf("SELECT count(question_id) FROM student_answers WHERE questionset_id=%s and student_id=%s", $_GET['set'], $userID);
+    $count = mysqli_query($db, $sql);
+    $SAcount = $count->fetch_row();
+    $SAcount = $SAcount[0]; //the number of questions the student answered
+    if($SAcount === $AQcount){
+      Header("Location: alreadyDone.php");
+      mysqli_close($db);
+      die();
+    }
     mysqli_close($db);
   }
 ?>
