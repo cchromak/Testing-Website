@@ -75,9 +75,11 @@
       $results = mysqli_query($db, $sql);
       while($row = $results->fetch_row()){
         //create a div to hold each assignment
-        echo '<div class="aList">';
+        echo '<div class="container">';
+        echo '<h1>';
         echo sprintf("<a href=addQ.php?set=%s>", $row[0]);
         echo sprintf("%s </a>", $row[1]);
+        echo '</h1>';
         echo '</div>';
       }
       mysqli_close($db);
