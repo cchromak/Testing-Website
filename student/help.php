@@ -34,13 +34,11 @@
 	<div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="p-4" style="background-color: aliceblue">
-        <h4 class="text-black"><a href="student.php" class="no-underline">Student Dashboard</a></h4>
-        <h4 class="text-black"><a href="assignments.php" class="no-underline">Assignments</a></h4>
-        <h4 class="text-black"><a href="grades.php" class="no-underline">Grades</a></h4>
+        <h4 class="text-black"><a href="index.php" class="no-underline">Log in</a></h4>
+        <h4 class="text-black"><a href="register.php" class="no-underline">Register</a></h4>
         <h4 class="text-black"><a href="aboutus.php" class="no-underline">About Us</a></h4>
-        <h4 class="text-black"><a href="contactus.php" class="no-underline">Contact Us</a></h4>
-        <h4 class="text-black"><a href="help.php" class="no-underline">Help</a></h4>
-        <h4 class="text-black"><a href="../logout.php" class="no-underline">Log out</a></h4>
+        <h4 class="text-black"><a href="contactus.html" class="no-underline">Contact Us</a></h4>
+        <h4 class="text-black"><a href="help.html" class="no-underline">Help</a></h4>
       </div>
     </div>
     <nav class="navbar navbar-light" style="background-color: aliceblue">
@@ -52,80 +50,13 @@
     <div class="container">
     <h1 index="greeting" class="display-1">How can we help?</h1>
   </div>
-  
-  <div class="container mt-4">
-    <div class="row">
-        <div class="col-auto mb-3">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Registration</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Details on how to register</h6>
-                    <p class="card-text">To register, simply click on the link below to get directed here.</p>
-                    <a href="#" class="card-link">Registration Page</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto mb-3">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Logging In</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Details on how to login</h6>
-                    <p class="card-text">The user must first register in order to login. To login, click the link below.</p>
-                    <a href="#" class="card-link">Login Page</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto mb-3">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Contact Us</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Contacting the Authors</h6>
-                    <p class="card-text">If there are additional bugs on the website, you may always contact us so that we can maintain our website.</p>
-                    <a href="#" class="card-link">Contact us</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto mb-3">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Assignments</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Check your assignments</h6>
-                    <p class="card-text">Students can check what assignments they were given in order to find out whats due.</p>
-                    <a href="#" class="card-link">Assignments</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto mb-3">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Dashboard</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Check your progress!</h6>
-                    <p class="card-text">Students and professors will have their own dashboards, respectively, in order to check their progress.</p>
-                    <a href="#" class="card-link">Students</a>
-                    <a href="#" class="card-link">Professors</a>
-                </div>
-            </div>
-        </div> 
-        <div class="col-auto mb-3">
-            <div class="card" style="width: 18rem;"> 
-                <div class="card-body">
-                    <h5 class="card-title">Grades</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Check (or modify) grades</h6>
-                    <p class="card-text">Students and professors will be able to check and modify grades, respectively.</p>
-                    <a href="#" class="card-link">Students</a>
-                    <a href="#" class="card-link">Professors</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-   <div class="container">
-    <h1 index="ending" class="display-4">Frequently Asked Questions</h1>
+  <div class="container">
+    <h1 index="ending" class="display-4">Frequently Asked Questions</h1> <br>
     <p class="lead">
   There are two buttons for the Registration page. Which one do I choose?
 	</p>
 	<p class="text-center">Register accordingly to what you are. If you are a student, then choose student.
-	If you aren't a student, choose professor if you're a professor.</p>
+	If you aren't a student, choose professor if you're a professor.</p> <br>
 	<p class="lead">
   What if I want to check my students grades' as a professor?
   <p class="text-center">Login as a professor, then in the Professor Dashboard, click on the "Grades" card link.</p>
